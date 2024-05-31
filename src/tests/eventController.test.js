@@ -23,12 +23,12 @@ describe('Event API', () => {
         console.log('Generated Token:', token); 
     });
 
-    // afterAll(async () => {
+    afterAll(async () => {
 
-    //     await User.deleteMany();
-    //     await Event.deleteMany();
-    //     await mongoose.connection.close();
-    // });
+        await User.deleteMany();
+        await Event.deleteMany();
+        await mongoose.connection.close();
+    });
 
     it('should create an event', async () => {
         const eventData = {
